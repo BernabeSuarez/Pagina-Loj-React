@@ -1,0 +1,26 @@
+.btn {
+  margin-top: 1.5rem;
+  color: #090909;
+  font-family: inherit;
+  font-size: 18px;
+  font-family: monospace;
+  text-transform: uppercase;
+  background: #ebebeb;
+  padding: 0.7rem 1.7rem;
+  border-radius: 0.5em;
+  border: 1px solid #ebebeb;
+  box-shadow: 6px 6px 12px #cccccc, -6px -6px 12px #fff;
+
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  box-shadow: 6px 6px 12px #fff, -6px -6px 12px #cccccc;
+}
+.btn:active {
+  color: #fff;
+  background-color: rgb(138, 136, 136);
+  box-shadow: 2px 2px 8px #cccccc;
+  transform: translate(0.1rem, 0.1rem);
+  border: none;
+}
