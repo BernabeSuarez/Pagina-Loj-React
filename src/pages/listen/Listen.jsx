@@ -7,6 +7,9 @@ const Container = styled.div`
   height: 100vh;
   padding: 4rem 12rem 4rem;
   color: #ebebeb;
+  @media (max-width: 576px) {
+    padding: 0;
+  }
 `;
 const Listen = () => {
   return (
