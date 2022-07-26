@@ -5,9 +5,18 @@
 }
 body {
   background-color: black;
+  background-image: url("./assets/img/back.png");
+  background-size: cover;
 }
 @font-face {
   font-family: "Tweaky";
   src: local("Tweaky"), url("./assets/fonts/Tweaky.ttf") format("truetype");
   font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url("./assets/img/back2.png");
+    background-size: cover;
+  }
 }

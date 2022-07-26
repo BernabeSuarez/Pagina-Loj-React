@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const SpotifyPlayer = styled.iframe`
-  border-radius: 12px;
-  width: 50%;
+  border-radius: 5px;
+  width: 40%;
   height: 80%;
   margin: 2em auto 2em;
-  @media (max-width: 576px) {
+  box-shadow: -1px 0px 59px -3px rgba(111, 252, 193, 0.39);
+  @media (max-width: 700px) {
     width: 80%;
     height: 60%;
   }

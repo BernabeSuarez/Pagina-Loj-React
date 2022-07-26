@@ -6,6 +6,7 @@ import About from "./pages/about/About";
 import Header from "./components/header/Header";
 import Gallery from "./pages/gallery/Gallery";
 import Listen from "./pages/listen/Listen";
+import Contact from "./pages/contact/Contact";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="gallery" element={<Gallery />} />
         <Route path="listen" element={<Listen />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
     </div>
   );

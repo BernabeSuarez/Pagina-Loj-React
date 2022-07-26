@@ -15,29 +15,31 @@ const StyledMenu = styled.nav`
   left: 0;
   transition: transform 0.7s ease-in-out;
   z-index: 50;
-  @media (max-width: 576px) {
+  @media (max-width: 700px) {
     width: 100%;
+    transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   }
 
   a {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     font-family: "Tweaky";
     letter-spacing: 0.5rem;
-    padding: 2rem 0;
+    padding: 1rem 0;
     font-weight: bold;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.4rem;
     color: #0d0c1d;
     text-decoration: none;
-    transition: color 0.3s linear;
+    transition: transform 0.3s ease-in-out;
 
-    @media (max-width: 576px) {
+    @media (max-width: 700px) {
       font-size: 1.5rem;
       text-align: center;
     }
 
     &:hover {
       color: #d30000;
+      transform: scale(1.1);
     }
   }
 `;
@@ -56,6 +58,9 @@ const Menu = ({ open, setOpen }) => {
       </Link>
       <Link onClick={() => setOpen(!open)} to="/listen">
         Escuchanos
+      </Link>
+      <Link onClick={() => setOpen(!open)} to="/contact">
+        Contacto
       </Link>
     </StyledMenu>
   );
