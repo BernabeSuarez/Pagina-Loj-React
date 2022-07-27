@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { BsInstagram } from "react-icons/bs";
+import News from "../../components/news/News";
 
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  padding: 4rem 12rem 4rem;
+  padding: 2rem 12rem 4rem;
   color: #ebebeb;
   @media (max-width: 576px) {
     padding: 2%;
@@ -38,7 +39,8 @@ const Home = () => {
   return (
     <Container>
       <Title>Bienvenidos a la pagina de La Otra Junta</Title>
-      <H2>Pagina en construccion</H2>
+      <H2>Se viene la Peña</H2>
+      <News />
       <H2>Seguinos en</H2>
       <SocialLink
         target="_blank"
