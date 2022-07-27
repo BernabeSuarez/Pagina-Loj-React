@@ -1,17 +1,18 @@
 import * as React from "react";
 import { Routes, Route } from "react-router-dom";
-import './App.css';
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Header from "./components/header/Header";
 import Gallery from "./pages/gallery/Gallery";
 import Listen from "./pages/listen/Listen";
 import Contact from "./pages/contact/Contact";
+import styled from 'styled-components';
 
-
+const AppContainer = styled.div`
+text-align: center;`
 function App() {
   return (
-    <div className="App">
+    <AppContainer>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,7 +21,7 @@ function App() {
         <Route path="listen" element={<Listen />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
-    </div>
+    </AppContainer>
   );
 }
 
