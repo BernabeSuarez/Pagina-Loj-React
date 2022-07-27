@@ -8,6 +8,12 @@ const NewsContainer = styled.div`
   img {
     width: 50%;
   }
+  @media (max-width: 700px) {
+    width: 90%;
+    img {
+      width: 60%;
+    }
+  }
 `;
 const News = () => {
   return (
