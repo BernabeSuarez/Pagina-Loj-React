@@ -7,9 +7,18 @@ import Gallery from "./pages/gallery/Gallery";
 import Listen from "./pages/listen/Listen";
 import Contact from "./pages/contact/Contact";
 import styled from 'styled-components';
+import back from './assets/img/back1.jpg'
+import back1 from './assets/img/back2.png'
+
 
 const AppContainer = styled.div`
-text-align: center;`
+text-align: center;
+background-image: url(${back});
+background-size:cover;
+@media (max-width: 700px){
+  background-image: url(${back1});
+background-size:cover;
+}`
 function App() {
   return (
     <AppContainer>
