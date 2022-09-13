@@ -1,17 +1,17 @@
 export const SliderData = [
     {
-        image: require('../../assets/img/1.jpg')
+        image: ('img/1.jpg')
     },
     {
-        image: require('../../assets/img/2.jpg')
+        image: ('img/2.jpg')
     },
     {
-        image: require('../../assets/img/3.jpg')
+        image: ('img/3.jpg')
     },
     {
-        image: require('../../assets/img/4.jpg')
+        image: ('img/4.jpg')
     },
     {
-        image: require('../../assets/img/5.jpg')
+        image: ('img/5.jpg')
     }
 ]

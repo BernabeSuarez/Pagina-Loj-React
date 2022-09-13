@@ -7,7 +7,7 @@ const StyledMenu = styled.nav`
   justify-content: center;
   background: #a6a7ab;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
-  height: 100vh;
+  min-height: 100vh;
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -17,6 +17,8 @@ const StyledMenu = styled.nav`
   z-index: 50;
   @media (max-width: 700px) {
     width: 100%;
+    min-height: 100vh;
+    position: fixed;
     transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   }
 
