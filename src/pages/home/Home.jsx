@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BsInstagram } from "react-icons/bs";
-import News from "../../components/news/News";
+import { motion } from "framer-motion";
 
 const Container = styled.div`
   width: 100%;
@@ -41,8 +41,8 @@ const Home = () => {
   return (
     <Container>
       <Title>Bienvenidos a la pagina de La Otra Junta</Title>
-      <H2>Se viene la Peña</H2>
-      <News />
+      <H2>Pagina en construccion...</H2>
+
       <H2>Seguinos en</H2>
       <SocialLink
         target="_blank"

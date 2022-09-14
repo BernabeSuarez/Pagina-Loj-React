@@ -22,6 +22,13 @@ const FormContainer = styled.div`
     border-radius: 10px;
     border: none;
   }
+  textarea {
+    width: 100%;
+    margin: 1rem auto 1rem;
+    padding: 2%;
+    border-radius: 10px;
+    border: none;
+  }
   button {
     width: 80%;
     margin: 1rem auto 1rem;
@@ -107,7 +114,7 @@ const Contact = () => {
                 placeholder="Email"
               />
               <Field
-                type="text"
+                as="textarea"
                 name="mensaje"
                 onChange={handleChange}
                 onBlur={handleBlur}

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import NewsPhoto from "../../assets/img/NextEvent.jpg";
 
 const NewsContainer = styled.div`
   width: 60%;
@@ -20,9 +19,7 @@ const NewsContainer = styled.div`
 const News = () => {
   return (
     <>
-      <NewsContainer>
-        <img src={NewsPhoto} alt="proximo evento" />
-      </NewsContainer>
+      <NewsContainer>Noticias</NewsContainer>
     </>
   );
 };
