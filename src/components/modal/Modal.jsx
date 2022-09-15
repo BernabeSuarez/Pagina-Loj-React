@@ -11,7 +11,18 @@ const DialogBanner = styled.div`
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(5px);
+  animation: slide-in-bck-center 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
+  @keyframes slide-in-bck-center {
+    0% {
+      transform: translateZ(900px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
   &* {
     z-index: 999;
   }
