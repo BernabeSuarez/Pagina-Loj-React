@@ -8,18 +8,19 @@ import Listen from "./pages/listen/Listen";
 import Contact from "./pages/contact/Contact";
 import styled from 'styled-components';
 import back from './assets/img/back1.jpg'
-import back1 from './assets/img/back2.png'
+import background from './assets/img/background.jpg'
 import { Modal } from "./components/modal/Modal";
 import { useOpenImg } from './hooks/useOpenImg'
+import NewsLetter from "./components/newsletter/Newsletter";
 
 
 
 const AppContainer = styled.div`
 text-align: center;
-background-image: url(${back});
+  background-image: url(${background});
 background-size:cover;
 @media (max-width: 700px){
-  background-image: url(${back1});
+  background-image: url(${background});
 background-size:cover;
 }`
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="listen" element={<Listen />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
+      <NewsLetter />
 
     </AppContainer>
   );

@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import Menu from "../menu/Menu";
 import Burger from "../burger/Burger";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 const useOnClickOutside = (ref, handler) => {
   React.useEffect(() => {
@@ -26,7 +27,9 @@ const Header = () => {
     <header ref={node} className="headerContainer">
       <Burger open={open} setOpen={setOpen} />
       <Menu open={open} setOpen={setOpen} />
-      <h2 className="logo">La Otra Junta</h2>
+      <Link to="/">
+        <h2 className="logo">La Otra Junta</h2>
+      </Link>
     </header>
   );
 };

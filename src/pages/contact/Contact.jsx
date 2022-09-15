@@ -9,6 +9,12 @@ const Title = styled.h2`
   color: antiquewhite;
   font-size: 1.5rem;
 `;
+
+const Error = styled.h3`
+  font-size: 0.6rem;
+  color: red;
+  text-transform: uppercase;
+`;
 const FormContainer = styled.div`
   width: 50%;
   background-color: #a6a7ab;
@@ -20,7 +26,7 @@ const FormContainer = styled.div`
   border-radius: 15px;
   input {
     width: 100%;
-    margin: 1rem auto 1rem;
+    margin: 1rem auto 0.5rem;
     padding: 2%;
     border-radius: 10px;
     border: none;
@@ -78,6 +84,7 @@ const validate = (values) => {
 
   return errors;
 };
+
 const notify = () => toast.success("mensaje Enviado!"); //abre el toast
 
 const Contact = () => {
@@ -121,7 +128,7 @@ const Contact = () => {
             value={formik.values.name}
             placeholder="Nombre"
           />
-          {formik.errors.name ? <div>{formik.errors.name}</div> : null}
+          {formik.errors.name ? <Error>{formik.errors.name}</Error> : null}
           <input
             type="email"
             name="email"
@@ -130,7 +137,7 @@ const Contact = () => {
             value={formik.values.email}
             placeholder="Email"
           />
-          {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+          {formik.errors.email ? <Error>{formik.errors.email}</Error> : null}
           <textarea
             name="message"
             onChange={formik.handleChange}

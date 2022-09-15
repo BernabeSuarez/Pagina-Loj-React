@@ -10,12 +10,17 @@
   z-index: 5;
 }
 
+.headerContainer a {
+  text-decoration: none;
+}
+
 .logo {
   width: 100%;
   margin-left: 0;
   font-family: "Tweaky";
   font-size: 2rem;
   color: antiquewhite;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 600px) {

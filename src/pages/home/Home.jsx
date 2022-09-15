@@ -15,9 +15,10 @@ const Container = styled.div`
 const Title = styled.h1`
   text-align: center;
   font-family: "Roboto";
+  font-weight: 100;
   @media (max-width: 576px) {
     padding: 2%;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `;
 const H1 = styled.h1`
@@ -39,6 +40,7 @@ const H2 = styled.h2`
   font-style: italic;
   font-weight: 100;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   @media (max-width: 576px) {
     padding: 2%;
     font-size: 1rem;
@@ -53,7 +55,7 @@ const SocialLink = styled.a`
 const Home = () => {
   return (
     <Container>
-      <Title>Bienvenidos</Title>
+      <Title>Somos</Title>
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}

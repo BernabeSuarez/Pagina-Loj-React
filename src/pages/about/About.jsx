@@ -13,6 +13,7 @@ const P = styled.p`
   color: antiquewhite;
   letter-spacing: 0.1rem;
   margin-top: 1%;
+  text-align: start;
 `;
 
 const TextContainer = styled.div`

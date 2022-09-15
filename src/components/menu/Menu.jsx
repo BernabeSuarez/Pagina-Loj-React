@@ -10,7 +10,7 @@ const StyledMenu = styled.nav`
   min-height: 100vh;
   text-align: left;
   padding: 2rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   transition: transform 0.7s ease-in-out;
