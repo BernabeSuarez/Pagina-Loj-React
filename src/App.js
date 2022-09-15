@@ -13,6 +13,7 @@ import { Modal } from "./components/modal/Modal";
 import { useOpenImg } from './hooks/useOpenImg'
 
 
+
 const AppContainer = styled.div`
 text-align: center;
 background-image: url(${back});
@@ -21,9 +22,12 @@ background-size:cover;
   background-image: url(${back1});
 background-size:cover;
 }`
+
+
 function App() {
   //pasar el hoook al modal y a la galeria 
   const showModal = useOpenImg()
+
 
   return (
     <AppContainer>
