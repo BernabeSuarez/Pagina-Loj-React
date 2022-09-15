@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Formik, Form, Field } from "formik";
+import { useFormik } from "formik";
+import { db } from "../../firebase/firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
 
 const Title = styled.h2`
   color: antiquewhite;
@@ -59,74 +61,80 @@ const H3 = styled.h3`
   margin-top: 1%;
 `;
 
+const validate = (values) => {
+  const errors = {};
+  if (!values.name) {
+    errors.name = "Campo necesario";
+  } else if (values.name.length < 8) {
+    errors.name = "Ingresa tu nombre";
+  }
+
+  if (!values.email) {
+    errors.email = "Campo necesario";
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = "Ingrese un mail valido";
+  }
+
+  return errors;
+};
+
 const Contact = () => {
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    validate,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+      try {
+        const docRef = addDoc(collection(db, "Contact Form"), {
+          to: values.email,
+          message: {
+            subject: values.name,
+            text: values.message,
+          },
+        });
+        console.log(docRef);
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+    },
+  });
   return (
     <>
       <Title>Contacto</Title>
       <H3>236-4511643</H3>
       <H3>Dejanos tu mensaje</H3>
       <FormContainer>
-        <Formik
-          initialValues={{ email: "", nombre: "" }}
-          validate={(values) => {
-            const errors = {};
-            if (!values.email) {
-              errors.email = "Required";
-            } else if (
-              !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-            ) {
-              errors.email = "Invalid email address";
-            }
-            return errors;
-          }}
-          onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
-          }}
-        >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting,
-            /* and other goodies */
-          }) => (
-            <Form onSubmit={handleSubmit}>
-              <Field
-                type="text"
-                name="nombre"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.nombre}
-                placeholder="Nombre"
-              />
-              <Field
-                type="email"
-                name="email"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
-                placeholder="Email"
-              />
-              <Field
-                as="textarea"
-                name="mensaje"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.mensaje}
-                placeholder="Tu mensaje"
-              />
-              <button type="submit" disabled={isSubmitting}>
-                Enviar
-              </button>
-            </Form>
-          )}
-        </Formik>
+        <form onSubmit={formik.handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.name}
+            placeholder="Nombre"
+          />
+          {formik.errors.name ? <div>{formik.errors.name}</div> : null}
+          <input
+            type="email"
+            name="email"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
+            placeholder="Email"
+          />
+          {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+          <textarea
+            name="message"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            placeholder="Tu mensaje"
+          />
+          <button type="submit">Enviar</button>
+        </form>
       </FormContainer>
     </>
   );
