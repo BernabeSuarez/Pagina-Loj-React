@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useFormik } from "formik";
 import { db } from "../../firebase/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
+import toast, { Toaster } from "react-hot-toast";
 
 const Title = styled.h2`
   color: antiquewhite;
@@ -77,6 +78,7 @@ const validate = (values) => {
 
   return errors;
 };
+const notify = () => toast.success("mensaje Enviado!"); //abre el toast
 
 const Contact = () => {
   const formik = useFormik({
@@ -87,13 +89,14 @@ const Contact = () => {
     },
     validate,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      notify();
       try {
         const docRef = addDoc(collection(db, "Contact Form"), {
           to: values.email,
           message: {
             subject: values.name,
             text: values.message,
+            email: values.email,
           },
         });
         console.log(docRef);
@@ -102,8 +105,10 @@ const Contact = () => {
       }
     },
   });
+
   return (
     <>
+      <Toaster position="bottom-left" reverseOrder={false} />
       <Title>Contacto</Title>
       <H3>236-4511643</H3>
       <H3>Dejanos tu mensaje</H3>
