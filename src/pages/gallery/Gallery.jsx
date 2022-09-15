@@ -12,10 +12,10 @@ function srcset(image, size, rows = 1, cols = 1) {
   };
 }
 
-const Gallery = ({ setOpenImage }) => {
+const Gallery = ({ setOpenModal }) => {
   return (
     <div className="galleryContainer">
-      <ImageList className="images" variant="quilted" cols={3} rowHeight={120}>
+      <ImageList className="images" variant="quilted" cols={3} rowHeight={80}>
         {dataGallery.map((item) => (
           <ImageListItem
             className="imageListItem"
@@ -28,7 +28,7 @@ const Gallery = ({ setOpenImage }) => {
               alt={item.title}
               loading="lazy"
               onClick={() => {
-                setOpenImage(item);
+                setOpenModal(item); //pasa el objeto de la imagen al modal
               }}
             />
           </ImageListItem>

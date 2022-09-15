@@ -20,6 +20,19 @@ const Title = styled.h1`
     font-size: 1.2rem;
   }
 `;
+const H1 = styled.h1`
+  text-align: center;
+  font-family: "Tweaky";
+  font-size: 8rem;
+  font-weight: 200;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  @media (max-width: 576px) {
+    padding: 2%;
+    font-size: 4rem;
+  }
+`;
+
 const H2 = styled.h2`
   text-align: center;
   font-family: "Roboto";
@@ -40,8 +53,14 @@ const SocialLink = styled.a`
 const Home = () => {
   return (
     <Container>
-      <Title>Bienvenidos a la pagina de La Otra Junta</Title>
-      <H2>Pagina en construccion...</H2>
+      <Title>Bienvenidos</Title>
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.9 }}
+      >
+        <H1>La Otra Junta</H1>
+      </motion.div>
 
       <H2>Seguinos en</H2>
       <SocialLink
@@ -51,6 +70,7 @@ const Home = () => {
       >
         <BsInstagram />
       </SocialLink>
+      <H2>Pagina en constante construccion...</H2>
     </Container>
   );
 };

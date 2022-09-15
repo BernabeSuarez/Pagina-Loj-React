@@ -1,10 +1,11 @@
 import { useState } from 'react'
 
 export const useOpenImg = () => {
-    const [openImage, setOpenImage] = useState(false)
+    const [openModal, setOpenModal] = useState(false)
 
     return {
-        openImage,
-        setOpenImage,
+        openModal,
+        setOpenModal,
     };
 };
+
