@@ -92,11 +92,10 @@ const Contact = () => {
       notify();
       try {
         const docRef = addDoc(collection(db, "Contact Form"), {
-          to: values.email,
+          to: "laotrajuntafolklore@gmail.com",
           message: {
-            subject: values.name,
+            subject: values.email,
             text: values.message,
-            email: values.email,
           },
         });
         console.log(docRef);
