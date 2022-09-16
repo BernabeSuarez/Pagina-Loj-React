@@ -12,6 +12,7 @@ import background from './assets/img/background.jpg'
 import { Modal } from "./components/modal/Modal";
 import { useOpenImg } from './hooks/useOpenImg'
 import NewsLetter from "./components/newsletter/Newsletter";
+import News from "./components/news/News";
 import Lyrics from "./pages/letras/Lyrics";
 
 
@@ -46,6 +47,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
       </Routes>
       <NewsLetter />
+      <News />
 
     </AppContainer>
   );
