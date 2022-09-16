@@ -67,12 +67,12 @@ const NewsLetter = () => {
     <NewsContainer>
       <NewsBody>
         <h3>
-          <span role="img" aria-label="fire">
-            🔥
+          <span role="img" aria-label="guitar">
+            🎸
           </span>
           Suscribite a nuestro Whatsapp de difusion
-          <span role="img" aria-label="fire">
-            🔥
+          <span role="img" aria-label="guitar">
+            🎸
           </span>
         </h3>
         <p>Mantenete al tanto de todas las novedades, peñas y demas!!! </p>
