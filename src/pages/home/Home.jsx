@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 2rem 12rem 4rem;
   color: #ebebeb;
   @media (max-width: 576px) {
@@ -30,7 +30,7 @@ const H1 = styled.h1`
   margin-bottom: 5rem;
   @media (max-width: 576px) {
     padding: 2%;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 `;
 

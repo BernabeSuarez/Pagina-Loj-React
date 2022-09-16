@@ -1,7 +1,7 @@
 .galleryContainer {
   position: relative;
-  min-width: 90%;
-  max-height: 75vh;
+  min-width: 80%;
+  min-height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;

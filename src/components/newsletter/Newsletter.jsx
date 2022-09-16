@@ -3,10 +3,13 @@ import styled from "styled-components";
 
 const NewsContainer = styled.div`
   width: 100%;
+  height: 50vh;
   display: flex;
+  margin: auto;
   justify-content: center;
   align-items: center;
   color: white;
+  backdrop-filter: blur(2px);
 `;
 
 const NewsBody = styled.div`
@@ -40,9 +43,22 @@ const FormContainer = styled.div`
 `;
 const InputNews = styled.input`
   width: 30rem;
-  background-color: #999696;
+  height: 2.5rem;
+  padding: 2%;
+  background-color: #e0dede;
+  border-radius: 10px;
+  margin: 2% 0.5%;
   @media (max-width: 768px) {
     width: 100%;
+  }
+`;
+const InputButton = styled(InputNews)`
+  width: 15rem;
+  padding: 0;
+  color: white;
+  background-color: #474646;
+  &:hover {
+    background-color: #16d0ff;
   }
 `;
 
@@ -54,16 +70,16 @@ const NewsLetter = () => {
           <span role="img" aria-label="fire">
             🔥
           </span>
-          ¡Enterate de las ultimas novedades!
+          Suscribite a nuestro Whatsapp de difusion
           <span role="img" aria-label="fire">
             🔥
           </span>
         </h3>
-        <p>Suscribite a nuestro newsletter y recibí ofertas exclusivas </p>
+        <p>Mantenete al tanto de todas las novedades, peñas y demas!!! </p>
         <FormContainer>
           <form action="">
-            <InputNews type="email" placeholder="Tu Email..." />
-            <button>Suscribirse</button>
+            <InputNews type="text" placeholder="Tu Telefono" />
+            <InputButton type="submit" value="Enviar" />
           </form>
         </FormContainer>
       </NewsBody>

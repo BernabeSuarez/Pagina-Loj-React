@@ -4,12 +4,15 @@ import styled from "styled-components";
 const Container = styled.div`
   margin: auto;
   padding: 2%;
+  backdrop-filter: grayscale(85%) contrast(95%);
 `;
 const Title = styled.h2`
   font-size: 2rem;
   color: antiquewhite;
 `;
 const P = styled.p`
+  font-family: "Roboto";
+  font-weight: 100;
   color: antiquewhite;
   letter-spacing: 0.1rem;
   margin-top: 1%;
@@ -23,7 +26,7 @@ const TextContainer = styled.div`
 const About = () => {
   return (
     <Container>
-      <Title>La Otra junta</Title>
+      <Title>Historia</Title>
       <TextContainer>
         <P>
           Somos un grupo folclórico formado a finales del 2015, influenciado por

@@ -15,7 +15,7 @@ function srcset(image, size, rows = 1, cols = 1) {
 const Gallery = ({ setOpenModal }) => {
   return (
     <div className="galleryContainer">
-      <ImageList className="images" variant="quilted" cols={3} rowHeight={80}>
+      <ImageList className="images" variant="quilted" cols={3} rowHeight={70}>
         {dataGallery.map((item) => (
           <ImageListItem
             className="imageListItem"

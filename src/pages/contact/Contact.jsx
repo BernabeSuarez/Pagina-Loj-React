@@ -26,7 +26,7 @@ const FormContainer = styled.div`
   border-radius: 15px;
   input {
     width: 100%;
-    margin: 1rem auto 0.5rem;
+    margin: 1rem auto 1rem;
     padding: 2%;
     border-radius: 10px;
     border: none;
@@ -51,12 +51,18 @@ const FormContainer = styled.div`
     background-color: #1f7379;
   }
   @media (max-width: 700px) {
-    width: 90%;
+    width: 95%;
     padding: 2%;
     input {
-      height: 2.5rem;
-      margin: 0.5rem auto 0.5rem;
-      padding: 1%;
+      height: 1.9rem;
+      padding: 2%;
+    }
+    textarea {
+      height: 2.9rem;
+      padding: 2%;
+    }
+    button {
+      width: 90%;
     }
   }
 `;
