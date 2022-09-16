@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { db } from "../../firebase/firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
+import toast, { Toaster } from "react-hot-toast";
 
 const NewsContainer = styled.div`
   width: 100%;
@@ -62,9 +65,29 @@ const InputButton = styled(InputNews)`
   }
 `;
 
+const notify = () => toast.success("Gracias por suscribirte!"); //abre el toast
+
 const NewsLetter = () => {
+  const [phoneNumber, setPhoneNumber] = useState("");
+
+  console.log(phoneNumber);
+  const SendNumber = async (e) => {
+    e.preventDefault();
+    try {
+      const docRef = await addDoc(collection(db, "Whatsapp List"), {
+        Tel: phoneNumber,
+      });
+
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+    notify();
+  };
+
   return (
     <NewsContainer>
+      <Toaster position="top-center" reverseOrder={false} />
       <NewsBody>
         <h3>
           <span role="img" aria-label="guitar">
@@ -77,8 +100,12 @@ const NewsLetter = () => {
         </h3>
         <p>Mantenete al tanto de todas las novedades, peñas y demas!!! </p>
         <FormContainer>
-          <form action="">
-            <InputNews type="text" placeholder="Tu Telefono" />
+          <form onSubmit={SendNumber}>
+            <InputNews
+              type="text"
+              placeholder="Tu Telefono"
+              onChange={(e) => setPhoneNumber(e.target.value)}
+            />
             <InputButton type="submit" value="Enviar" />
           </form>
         </FormContainer>

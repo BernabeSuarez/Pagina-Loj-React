@@ -1,21 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import NewsBack from "../../assets/img/NewsBack.jpg";
 
 const NewsContainer = styled.div`
   width: 100%;
   min-height: 20vh;
   padding: 4%;
-  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  background-image: url(${NewsBack});
 `;
 
 const DataContainer = styled.div`
   width: 100%;
   min-height: 40vh;
   padding: 4%;
-  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -26,12 +26,13 @@ const DataContainer = styled.div`
   }
 `;
 const NewsData = styled.div`
-  min-width: 15%;
+  min-width: 25%;
   text-align: center;
   font-family: "Roboto";
   display: flex;
   justify-content: center;
   flex-direction: column;
+
   @media (max-width: 768px) {
     margin-bottom: 4%;
   }
