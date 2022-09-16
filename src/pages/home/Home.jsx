@@ -72,7 +72,6 @@ const Home = () => {
       >
         <BsInstagram />
       </SocialLink>
-      <H2>Pagina en constante construccion...</H2>
     </Container>
   );
 };
