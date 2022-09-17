@@ -7,8 +7,9 @@ const Container = styled.div`
   backdrop-filter: grayscale(85%) contrast(95%);
 `;
 const Title = styled.h2`
-  font-size: 2rem;
+  font-family: "Tweaky";
   color: antiquewhite;
+  font-size: 3.2rem;
 `;
 const P = styled.p`
   font-family: "Roboto";

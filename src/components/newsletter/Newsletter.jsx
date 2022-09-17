@@ -101,7 +101,7 @@ const NewsLetter = () => {
 
   return (
     <NewsContainer>
-      <Toaster position="top-center" reverseOrder={false} />
+      <Toaster position="top-left" reverseOrder={false} />
       <NewsBody>
         <h3>
           <span role="img" aria-label="guitar">

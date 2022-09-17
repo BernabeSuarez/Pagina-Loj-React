@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BsInstagram } from "react-icons/bs";
+import { BsInstagram, BsSpotify, BsYoutube } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const Container = styled.div`
@@ -48,8 +48,13 @@ const H2 = styled.h2`
 `;
 const SocialLink = styled.a`
   text-decoration: none;
-  color: rgba(255, 115, 0, 1);
-  font-size: 1.3rem;
+  margin-left: 25px;
+  color: #ffffff;
+  font-size: 2rem;
+  transition: 0.5s;
+  &:hover {
+    color: #f73434c8;
+  }
 `;
 
 const Home = () => {
@@ -68,9 +73,23 @@ const Home = () => {
       <SocialLink
         target="_blank"
         rel="noreferrer"
-        href="https://www.instagram.com/laotrajuntafolclore/"
+        href="https://www.instagram.com/laotrajunta/"
       >
         <BsInstagram />
+      </SocialLink>
+      <SocialLink
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.youtube.com/channel/UCNp-QeX7VY7ebufY6R--hGg/featured"
+      >
+        <BsYoutube />
+      </SocialLink>
+      <SocialLink
+        target="_blank"
+        rel="noreferrer"
+        href="https://open.spotify.com/artist/1jpoVI9z6RFnhmB5d5SQCw?si=8PEfH4qUSqSOynhA996ISg"
+      >
+        <BsSpotify />
       </SocialLink>
     </Container>
   );

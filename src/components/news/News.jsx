@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import NewsBack from "../../assets/img/NewsBack.jpg";
+import { dataTour } from "../../data/dataTour";
 
 const NewsContainer = styled.div`
   width: 100%;
@@ -18,70 +19,77 @@ const DataContainer = styled.div`
   padding: 4%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
   @media (max-width: 768px) {
     padding: 2%;
     flex-direction: column;
   }
 `;
+
+const TitleTour = styled.h2`
+  font-family: "tweaky";
+  font-size: 3.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 5%;
+  }
+`;
 const NewsData = styled.div`
-  min-width: 25%;
-  text-align: center;
+  min-width: 30%;
+  padding: 1% 5%;
+  text-align: left;
   font-family: "Roboto";
   display: flex;
   justify-content: center;
   flex-direction: column;
 
   @media (max-width: 768px) {
+    width: 90%;
     margin-bottom: 4%;
+    border-bottom: 1px solid black;
   }
 `;
-
+const Button = styled.button`
+  width: 90%;
+  height: 2.3rem;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: 2px solid red;
+  color: red;
+  text-transform: uppercase;
+  background: linear-gradient(
+    to right,
+    red 50%,
+    transparent 50%
+  ); //para que se pueda mover el color
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.6s ease-in-out;
+  &:hover {
+    background-position: left bottom; //mueve el color de izq a dere.
+    color: white;
+    background-color: red;
+  }
+`;
 const News = () => {
   return (
     <>
       <NewsContainer>
-        <h2>Proximas Fechas</h2>
+        <TitleTour>Proximas Fechas</TitleTour>
         <DataContainer>
-          <NewsData>
-            <h2>25 septiembre</h2>
-            <h2>Expo-vedia</h2>
-            <p>18:30Hs</p>
-            <p>Vedia - Buenos Aires</p>
-          </NewsData>
-          <NewsData>
-            <h2>8 Octubre</h2>
-            <h2>Peña Teatro Porta Pia</h2>
-            <p>22:30Hs</p>
-            <p>Lincoln - Buenos Aires</p>
-          </NewsData>
-          <NewsData>
-            <h2>16 Noviembre</h2>
-            <h2>Peña Sombra Blanca</h2>
-            <p>22:30Hs</p>
-            <p>Capital Federal - Buenos Aires</p>
-          </NewsData>
-        </DataContainer>
-        <DataContainer>
-          <NewsData>
-            <h2>17 Noviembre</h2>
-            <h2>Peña Los Chaza</h2>
-            <p>22:00Hs</p>
-            <p>La PLata - Buenos Aires</p>
-          </NewsData>
-          <NewsData>
-            <h2>18 Noviembre</h2>
-            <h2>Peña Shacarera</h2>
-            <p>22:00Hs</p>
-            <p>La PLata - Buenos Aires</p>
-          </NewsData>
-          <NewsData>
-            <h2>20 Noviembre</h2>
-            <h2>Fiesta de la Vaquillona</h2>
-            <p>19:00Hs</p>
-            <p>Germania - Buenos Aires</p>
-          </NewsData>
+          {dataTour.map((item) => (
+            <NewsData>
+              <h2>{item.date}</h2>
+              <h2>{item.name}</h2>
+              <p>{item.time}</p>
+              <p>{item.place}</p>
+              <Button>Como Llegar</Button>
+            </NewsData>
+          ))}
         </DataContainer>
       </NewsContainer>
     </>
