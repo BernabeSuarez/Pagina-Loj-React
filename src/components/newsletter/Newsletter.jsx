@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { db } from "../../firebase/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
-import toast, { Toaster } from "react-hot-toast";
+import Toast from "../../utils/toast/Toast";
 
 const NewsContainer = styled.div`
   width: 100%;
@@ -65,22 +65,8 @@ const InputButton = styled(InputNews)`
   }
 `;
 
-const notify = () =>
-  //muestra el toast
-  toast.success("Gracias por suscribirte!", {
-    style: {
-      //estilo del toast
-      border: "1px solid #09ad11",
-      padding: "16px",
-      color: "#000000",
-    },
-    iconTheme: {
-      primary: "#00c02a",
-      secondary: "#FFFAEE",
-    },
-  });
-
 const NewsLetter = () => {
+  const [open, setOpen] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("");
 
   console.log(phoneNumber);
@@ -95,13 +81,25 @@ const NewsLetter = () => {
     } catch (e) {
       console.error("Error adding document: ", e);
     }
-    notify();
+    setOpen(true);
     setPhoneNumber("");
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
   };
 
   return (
     <NewsContainer>
-      <Toaster position="top-left" reverseOrder={false} />
+      <Toast
+        message="Gracias por Suscribirte 👍"
+        open={open}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      />
       <NewsBody>
         <h3>
           <span role="img" aria-label="guitar">
@@ -117,6 +115,7 @@ const NewsLetter = () => {
           <form onSubmit={SendNumber}>
             <InputNews
               type="text"
+              name="number"
               placeholder="Tu Telefono"
               onChange={(e) => setPhoneNumber(e.target.value)}
               value={phoneNumber}

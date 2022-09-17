@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useFormik } from "formik";
 import { db } from "../../firebase/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
-import toast, { Toaster } from "react-hot-toast";
 import { BsWhatsapp } from "react-icons/bs";
+import Toast from "../../utils/toast/Toast";
 
 const ContactContainer = styled.div`
   width: 100%;
@@ -151,8 +151,13 @@ const validate = (values) => {
 };
 
 const Contact = () => {
-  const notifyMessage = () => {
-    toast.success("Mensaje Enviado!!!");
+  const [open, setOpen] = useState(false);
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
   };
 
   const formik = useFormik({
@@ -172,18 +177,21 @@ const Contact = () => {
           },
         });
         console.log(docRef);
-        notifyMessage();
       } catch (e) {
         console.error("Error adding document: ", e);
       }
+      setOpen(true);
     },
   });
 
   return (
     <ContactContainer>
       <div>
-        <Toaster
-          position="top-center" // Used to adapt the animation
+        <Toast
+          message="Tu mensaje fue enviado!"
+          open={open}
+          onClose={handleClose}
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
         />
       </div>
       <Title>Contacto</Title>
