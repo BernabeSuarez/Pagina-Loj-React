@@ -91,7 +91,19 @@ const validate = (values) => {
   return errors;
 };
 
-const notify = () => toast.success("mensaje Enviado!"); //abre el toast
+const notify = () =>
+  toast.success("mensaje Enviado!", {
+    style: {
+      //estilo del toast
+      border: "1px solid #09ad11",
+      padding: "16px",
+      color: "#000000",
+    },
+    iconTheme: {
+      primary: "#00c02a",
+      secondary: "#FFFAEE",
+    },
+  }); //abre el toast
 
 const Contact = () => {
   const formik = useFormik({
@@ -120,7 +132,7 @@ const Contact = () => {
 
   return (
     <>
-      <Toaster position="bottom-left" reverseOrder={false} />
+      <Toaster position="top-center" reverseOrder={false} />
       <Title>Contacto</Title>
       <H3>236-4511643</H3>
       <H3>Dejanos tu mensaje</H3>

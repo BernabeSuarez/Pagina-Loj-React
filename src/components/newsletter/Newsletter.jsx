@@ -65,7 +65,20 @@ const InputButton = styled(InputNews)`
   }
 `;
 
-const notify = () => toast.success("Gracias por suscribirte!"); //abre el toast
+const notify = () =>
+  //muestra el toast
+  toast.success("Gracias por suscribirte!", {
+    style: {
+      //estilo del toast
+      border: "1px solid #09ad11",
+      padding: "16px",
+      color: "#000000",
+    },
+    iconTheme: {
+      primary: "#00c02a",
+      secondary: "#FFFAEE",
+    },
+  });
 
 const NewsLetter = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -83,6 +96,7 @@ const NewsLetter = () => {
       console.error("Error adding document: ", e);
     }
     notify();
+    setPhoneNumber("");
   };
 
   return (
@@ -105,6 +119,7 @@ const NewsLetter = () => {
               type="text"
               placeholder="Tu Telefono"
               onChange={(e) => setPhoneNumber(e.target.value)}
+              value={phoneNumber}
             />
             <InputButton type="submit" value="Enviar" />
           </form>
