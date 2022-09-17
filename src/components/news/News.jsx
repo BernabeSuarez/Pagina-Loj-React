@@ -75,6 +75,7 @@ const Button = styled.button`
     background-color: red;
   }
 `;
+
 const News = () => {
   return (
     <>
@@ -87,7 +88,9 @@ const News = () => {
               <h2>{item.name}</h2>
               <p>{item.time}</p>
               <p>{item.place}</p>
-              <Button>Como Llegar</Button>
+              <a href={item.url} target="_blank" rel="noreferrer">
+                <Button>Como Llegar</Button>
+              </a>
             </NewsData>
           ))}
         </DataContainer>
