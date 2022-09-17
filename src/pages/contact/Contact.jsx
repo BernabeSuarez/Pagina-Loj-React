@@ -167,9 +167,9 @@ const Contact = () => {
       message: "",
     },
     validate,
-    onSubmit: (values) => {
+    onSubmit: async (values, onSubmitProps) => {
       try {
-        const docRef = addDoc(collection(db, "Contact Form"), {
+        const docRef = await addDoc(collection(db, "Contact Form"), {
           to: "laotrajuntafolklore@gmail.com",
           message: {
             subject: values.email,
@@ -181,6 +181,7 @@ const Contact = () => {
         console.error("Error adding document: ", e);
       }
       setOpen(true);
+      onSubmitProps.resetForm();
     },
   });
 
@@ -191,7 +192,7 @@ const Contact = () => {
           message="Tu mensaje fue enviado!"
           open={open}
           onClose={handleClose}
-          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+          anchorOrigin={{ vertical: "top", horizontal: "center" }}
         />
       </div>
       <Title>Contacto</Title>
@@ -222,6 +223,7 @@ const Contact = () => {
             name="message"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
+            value={formik.values.message}
             placeholder="Tu mensaje"
           />
           <button type="submit">Enviar</button>
