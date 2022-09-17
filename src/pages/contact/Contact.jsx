@@ -130,6 +130,7 @@ const WhatsappTitle = styled.h5`
   display: none;
   @media (max-width: 768px) {
     display: block;
+    margin-bottom: 1rem;
   }
 `;
 
