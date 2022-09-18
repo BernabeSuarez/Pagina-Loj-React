@@ -10,18 +10,19 @@ const FooterContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  background-color: white;
+  background-color: transparent;
   @media (max-width: 576px) {
+    background-color: white;
     flex-direction: column;
   }
 `;
 
 const FooterLogo = styled.div`
   width: 30%;
-  color: black;
+  color: white;
   font-family: "tweaky";
   font-size: 1.4rem;
-  border-right: 1px solid black;
+  border-right: 1px solid white;
   @media (max-width: 576px) {
     display: none;
   }
@@ -33,7 +34,7 @@ const FooterSocial = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  border-right: 1px solid black;
+  border-right: 1px solid white;
   @media (max-width: 576px) {
     width: 90%;
     border: none;
@@ -43,37 +44,71 @@ const FooterSocial = styled.div`
 `;
 
 const SocialLinksFooter = styled(SocialLink)`
-  border: 1px solid black;
+  border: 1px solid white;
   margin: auto;
   border-radius: 50%;
   padding: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 576px) {
+    border: 1px solid black;
+  }
+`;
+
+const InstaContainer = styled(SocialLinksFooter)`
+  background: transparent;
+  &:hover {
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+  }
 `;
 const InstaIcon = styled(BsInstagram)`
   font-size: 1.4rem;
-  color: black;
-  margin: auto;
+  color: white;
+  @media (max-width: 576px) {
+    color: black;
+    margin: auto;
+  }
 `;
 const YoutubeIcon = styled(BsYoutube)`
   font-size: 1.4rem;
-  color: black;
-  margin: auto;
+  color: white;
+  &:hover {
+    color: red;
+  }
+  @media (max-width: 576px) {
+    color: black;
+    margin: auto;
+  }
 `;
 const SpotifyIcon = styled(BsSpotify)`
   font-size: 1.4rem;
-  color: black;
-  margin: auto;
+  color: white;
+  &:hover {
+    color: #00ee47;
+  }
+  @media (max-width: 576px) {
+    color: black;
+    margin: auto;
+  }
 `;
 
 const FooterInfo = styled.div`
+  color: white;
   width: 30%;
   & h4 {
     font-family: Montserrat;
     font-weight: 100;
   }
   @media (max-width: 576px) {
+    color: black;
     width: 90%;
     margin-bottom: 0.8rem;
   }
@@ -85,13 +120,13 @@ const Footer = () => {
         <h3>La Otra Junta</h3>
       </FooterLogo>
       <FooterSocial>
-        <SocialLinksFooter
+        <InstaContainer
           target="_blank"
           rel="noreferrer"
           href="https://www.instagram.com/laotrajunta/"
         >
           <InstaIcon />
-        </SocialLinksFooter>
+        </InstaContainer>
         <SocialLinksFooter
           target="_blank"
           rel="noreferrer"
