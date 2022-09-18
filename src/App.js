@@ -14,6 +14,7 @@ import { useOpenImg } from './hooks/useOpenImg'
 import NewsLetter from "./components/newsletter/Newsletter";
 import News from "./components/news/News";
 import Lyrics from "./pages/letras/Lyrics";
+import Footer from "./components/footer/Footer";
 
 
 
@@ -48,7 +49,7 @@ function App() {
       </Routes>
       <NewsLetter />
       <News />
-
+      <Footer />
     </AppContainer>
   );
 }

@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "Tweaky";
+  src: local("Tweaky"), url("./assets/fonts/Tweaky.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"),
+    url("./assets/fonts/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("./assets/fonts/Montserrat.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,15 +25,18 @@ body {
   background-image: url("./assets/img/background.jpg");
   background-size: cover;
 }
-@font-face {
-  font-family: "Tweaky";
-  src: local("Tweaky"), url("./assets/fonts/Tweaky.ttf") format("truetype");
-  font-weight: bold;
+
+body::-webkit-scrollbar {
+  width: 13px;
+  background-color: #020202;
 }
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto"),
-    url("./assets/fonts/Roboto-Light.ttf") format("truetype");
+body::-webkit-scrollbar-thumb {
+  background: #cbcbce;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #6a6a6d;
 }
 
 @media (max-width: 768px) {

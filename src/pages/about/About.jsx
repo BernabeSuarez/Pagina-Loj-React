@@ -12,7 +12,7 @@ const Title = styled.h2`
   font-size: 3.2rem;
 `;
 const P = styled.p`
-  font-family: "Roboto";
+  font-family: "Montserrat";
   font-weight: 100;
   color: antiquewhite;
   letter-spacing: 0.1rem;
@@ -44,7 +44,7 @@ const About = () => {
         </P>
 
         <P>
-          En 2019 participamos del los espectáculos callejeros del Festival de
+          En 2019 participamos de los espectáculos callejeros del Festival de
           Cosquín, además de tocar en las peñas más importantes; La fiesta del
           violinero, La Salamanca, el fogón Criollo oficial de Cosquín, entre
           otras más.
