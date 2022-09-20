@@ -1,7 +1,5 @@
 
 
-
-
 export const dataTour = [
     {
         date: "25 Septiembre",

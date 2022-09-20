@@ -1,6 +1,6 @@
 import React from "react";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../firebase/firebaseConfig";
+import { dataTour } from "../../data/dataTour";
+
 import {
   NewsContainer,
   TitleTour,
@@ -9,26 +9,13 @@ import {
   Button,
 } from "./newsElements";
 
-const dataShows = [];
-
-let Shows = async () => {
-  const querySnapshot = await getDocs(collection(db, "Shows"));
-
-  querySnapshot.forEach((item) => {
-    dataShows.push(item.data());
-  });
-  return dataShows;
-};
-console.log(dataShows);
-
-Shows();
 const News = () => {
   return (
     <>
       <NewsContainer>
         <TitleTour>Proximas Fechas</TitleTour>
         <DataContainer>
-          {dataShows.map((item) => (
+          {dataTour.map((item) => (
             <NewsData>
               <h2>{item.date}</h2>
               <h2>{item.name}</h2>
