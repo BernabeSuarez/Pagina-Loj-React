@@ -1,13 +1,7 @@
 
 
 export const dataTour = [
-    {
-        date: "25 Septiembre",
-        name: "Expo-vedia",
-        time: "18:30 Hs.",
-        place: "Vedia - Buenos Aires",
-        url: "https://goo.gl/maps/juiS9pYA3Smi5dCV6"
-    },
+
     {
         date: "8 Octubre",
         name: "Peña Teatro Porta Pia",
