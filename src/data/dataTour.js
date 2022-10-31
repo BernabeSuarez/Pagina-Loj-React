@@ -3,13 +3,6 @@
 export const dataTour = [
 
     {
-        date: "8 Octubre",
-        name: "Peña Teatro Porta Pia",
-        time: "22:30 Hs.",
-        place: "Lincoln - Buenos Aires",
-        url: "https://goo.gl/maps/jXtP4NdDjRNG6SJB9"
-    },
-    {
         date: "16 Noviembre",
         name: "Peña Sombra Blanca",
         time: "22:30 Hs.",
