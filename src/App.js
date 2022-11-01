@@ -15,6 +15,7 @@ import NewsLetter from "./components/newsletter/Newsletter";
 import News from "./components/news/News";
 import Lyrics from "./pages/letras/Lyrics";
 import Footer from "./components/footer/Footer";
+import Downloads from "./pages/downloads/Downloads";
 
 
 
@@ -45,6 +46,7 @@ function App() {
         <Route path="gallery" element={<Gallery {...showModal} />} />
         <Route path="listen" element={<Listen />} />
         <Route path="lyrics" element={<Lyrics />} />
+        <Route path="downloads" element={<Downloads />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
       <NewsLetter />

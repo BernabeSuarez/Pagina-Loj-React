@@ -64,6 +64,9 @@ const Menu = ({ open, setOpen }) => {
       <Link onClick={() => setOpen(!open)} to="/lyrics">
         Letras
       </Link>
+      <Link onClick={() => setOpen(!open)} to="/downloads">
+        Descargas
+      </Link>
       <Link onClick={() => setOpen(!open)} to="/contact">
         Contacto
       </Link>
