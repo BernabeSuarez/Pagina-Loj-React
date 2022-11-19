@@ -7,11 +7,22 @@ import {
   DataContainer,
   NewsData,
   Button,
+  VideoContainer,
 } from "./newsElements";
 
 const News = () => {
   return (
     <>
+      <VideoContainer>
+        <TitleTour>Novedades</TitleTour>
+        <iframe
+          src="https://www.youtube.com/embed/37hzjtRfr00"
+          title="Chacarera del Chilalo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </VideoContainer>
       <NewsContainer>
         <TitleTour>Proximas Fechas</TitleTour>
         <DataContainer>

@@ -73,3 +73,25 @@ export const Button = styled.button`
     background-color: red;
   }
 `;
+
+export const VideoContainer = styled.div`
+padding:2%;
+display: flex;
+flex-direction: column;
+justify-content:center;
+align-items: center;
+background-image: url(${NewsBack});
+& iframe {
+width:700px;
+height:394px;
+margin: 2%;
+border-radius:20px;
+@media (max-width: 768px) {
+  margin:1%;
+    width:300px;
+    height:169px;
+    border-radius:10px;
+  };
+
+}
+`
