@@ -2,7 +2,7 @@ export const dataTour = [
 
 
     {
-        date: "20 Noviembre",
+        date: "Fecha A confirmar",
         name: "Fiesta de la Vaquillona",
         time: "19:00 Hs.",
         place: "Germania - Buenos Aires",

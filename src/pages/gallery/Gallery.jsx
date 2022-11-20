@@ -26,6 +26,7 @@ const Gallery = ({ setOpenModal }) => {
             <img
               {...srcset(item.img, 121, item.rows, item.cols)}
               alt={item.title}
+              title={item.title}
               loading="lazy"
               onClick={() => {
                 setOpenModal(item); //pasa el objeto de la imagen al modal
