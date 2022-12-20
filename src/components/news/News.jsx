@@ -25,10 +25,10 @@ const News = () => {
         ></iframe>
       </VideoContainer>
       <NewsContainer>
-        <TitleTour>Proximas Fechas</TitleTour>
+        {dataTour.length === 0 ? null : <TitleTour>Proximas Fechas</TitleTour>}
         <DataContainer>
           {dataTour.length === 0 ? (
-            <H2Empty>No Hay fechas Por el Momento...</H2Empty>
+            <H2Empty>...No Hay fechas Por el Momento...</H2Empty>
           ) : (
             dataTour.map((item) => (
               <NewsData>
