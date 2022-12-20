@@ -95,3 +95,6 @@ border-radius:20px;
 
 }
 `
+export const H2Empty = styled.h2`
+margin: auto;
+`
