@@ -2,17 +2,20 @@
   font-family: "Tweaky";
   src: local("Tweaky"), url("./assets/fonts/Tweaky.ttf") format("truetype");
   font-weight: bold;
+  font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
   src: local("Roboto"),
     url("./assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Montserrat";
   src: local("Montserrat"),
     url("./assets/fonts/Montserrat.ttf") format("truetype");
+  font-display: swap;
 }
 
 * {
