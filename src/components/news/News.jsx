@@ -1,5 +1,6 @@
 import React from "react";
 import { dataTour } from "../../data/dataTour";
+import lazyYoutubeEmbed from "lazy-youtube-embed";
 
 import {
   NewsContainer,
@@ -16,13 +17,15 @@ const News = () => {
     <>
       <VideoContainer>
         <TitleTour>Novedades</TitleTour>
-        <iframe
-          src="https://www.youtube.com/embed/LrJUQXiCVPY"
-          title="La Otra Junta!"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <lazyYoutubeEmbed>
+          <iframe
+            src="https://www.youtube.com/embed/LrJUQXiCVPY"
+            title="La Otra Junta!"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </lazyYoutubeEmbed>
       </VideoContainer>
       <NewsContainer>
         {dataTour.length === 0 ? null : <TitleTour>Proximas Fechas</TitleTour>}
