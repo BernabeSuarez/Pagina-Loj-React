@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-//import { dataTour } from "../../data/dataTour";
 import { database } from "../../firebase/firebaseConfig";
 import { onValue, ref } from "firebase/database";
 
