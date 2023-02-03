@@ -21,9 +21,10 @@ export const Title = styled.h1`
 `;
 export const H1 = styled.h1`
   text-align: center;
-  font-family: "Tweaky";
-  font-size: 8rem;
-  font-weight: 200;
+  font-family: "Againts";
+  color: #FC0110;
+  font-size: 9rem;
+  font-weight: 100;
   margin-top: 5rem;
   margin-bottom: 10rem;
   @media (max-width: 576px) {
