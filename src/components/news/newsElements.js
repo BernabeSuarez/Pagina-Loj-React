@@ -9,6 +9,7 @@ export const NewsContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   background-image: url(${NewsBack});
+ 
 `;
 
 export const DataContainer = styled.div`
@@ -20,6 +21,7 @@ export const DataContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  
 
   @media (max-width: 768px) {
     padding: 2%;
@@ -37,13 +39,21 @@ export const TitleTour = styled.h2`
   }
 `;
 export const NewsData = styled.div`
-  min-width: 30%;
+  width: 40%;
   padding: 1% 5%;
   text-align: left;
   font-family: "Roboto";
   display: flex;
   justify-content: center;
   flex-direction: column;
+   & img {
+    width: 90%;
+    border-radius:15px;
+    margin-bottom: 10px;
+    box-shadow: 4px 13px 32px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 13px 32px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 13px 32px 0px rgba(0,0,0,0.75);
+  }
 
   @media (max-width: 768px) {
     width: 90%;
