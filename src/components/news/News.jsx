@@ -1,5 +1,7 @@
-import React from "react";
-import { dataTour } from "../../data/dataTour";
+import React, { useState, useEffect } from "react";
+//import { dataTour } from "../../data/dataTour";
+import { database } from "../../firebase/firebaseConfig";
+import { onValue, ref } from "firebase/database";
 
 import {
   NewsContainer,
@@ -12,6 +14,20 @@ import {
 } from "./newsElements";
 
 const News = () => {
+  const [dataTour, setDataTour] = useState([]);
+
+  useEffect(() => {
+    const query = ref(database, "tour");
+    return onValue(query, (snapshot) => {
+      const data = snapshot.val();
+
+      if (snapshot.exists()) {
+        Object.values(data).map((items) =>
+          setDataTour((dataTour) => [...dataTour, items])
+        );
+      }
+    });
+  }, []);
   return (
     <>
       <VideoContainer>

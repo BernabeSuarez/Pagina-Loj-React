@@ -1,12 +1,11 @@
 import React from "react";
 import { BsInstagram, BsSpotify, BsYoutube } from "react-icons/bs";
 import { motion } from "framer-motion";
-import { Container, Title, H1, SocialLink, H2 } from "./homeElements";
+import { Container, H1, SocialLink, H2 } from "./homeElements";
 
 const Home = () => {
   return (
     <Container>
-      <Title>Somos</Title>
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}

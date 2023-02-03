@@ -25,7 +25,7 @@ export const H1 = styled.h1`
   font-size: 8rem;
   font-weight: 200;
   margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   @media (max-width: 576px) {
     padding: 2%;
     font-size: 3rem;
