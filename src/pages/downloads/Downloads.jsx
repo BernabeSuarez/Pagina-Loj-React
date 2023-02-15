@@ -34,7 +34,7 @@ const AlbumContainer = styled.div`
     width: 90%;
     margin: auto;
     border-radius: 15px;
-    box-shadow: -1px 0px 59px -3px rgba(111, 252, 193, 0.39);
+    box-shadow: 0 0 3.75rem rgba(111, 252, 193, 0.39);
   }
   & a {
     width: 85%;

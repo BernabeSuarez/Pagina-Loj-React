@@ -2,14 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const SpotifyPlayer = styled.iframe`
-  border-radius: 5px;
-  width: 40%;
-  height: 80%;
+  border-radius: 20px;
+
+  width: 50%;
   margin: 2em auto 2em;
-  box-shadow: -1px 0px 59px -3px rgba(111, 252, 193, 0.39);
+  box-shadow: 0 0 3.75rem rgba(111, 252, 193, 0.39);
   @media (max-width: 700px) {
     width: 80%;
-    height: 60%;
   }
 `;
 const Title = styled.h2`
