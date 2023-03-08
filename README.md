@@ -1,6 +1,6 @@
 # Pagina de difusion de grupo musical
 
-[Link a la pagina La Otra Junta](https://www.laotrajunta.com.ar)
+[Link a la pagina La Otra Junta](http://www.laotrajunta.com.ar/)
 
 Contiene galeria, videos, contactos(whatsapp, y mediante formularios)
 utiliza como backend  los servivios de **Firebase**
