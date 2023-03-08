@@ -2,9 +2,9 @@
 
 [Link a la pagina La Otra Junta](http://www.laotrajunta.com.ar/)
 
-Contiene galeria, videos, contactos(whatsapp, y mediante formularios)
+### Contiene galeria, videos, contactos(whatsapp, y mediante formularios)
 utiliza como backend  los servivios de **Firebase**
 
 Este proyecto esta realizado con React, Styled components y Firebase.
 
-*pagina en constante actualizacion*
+*pagina en constante actualizacion...*
