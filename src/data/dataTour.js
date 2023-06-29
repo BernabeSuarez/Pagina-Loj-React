@@ -1,11 +1,11 @@
 export const dataTour = [
     {
-        "date": "Sabado 11 de Marzo",
-        "name": "Club Union El Dorado",
+        "date": "Viernes 7 de Julio",
+        "name": "Club Rivadavia de Lincoln",
         "time": "21:00 Hs.",
-        "place": "El dorado",
-        "url": "https://goo.gl/maps/c7ZmUEBR6tg1LTiU8",
-        "src": "img/festival.webp"
+        "place": "Lincoln",
+        "url": "https://goo.gl/maps/tTWAJ4wHgi9po6Kr8",
+        "src": "img/peña-lincoln.jpg"
     }
 
 ]

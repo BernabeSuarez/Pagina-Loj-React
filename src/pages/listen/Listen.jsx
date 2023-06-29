@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Player from "../../components/player/Player";
+import Music from "../../components/player/Music";
 
 const Container = styled.div`
   width: 100%;
@@ -14,7 +14,7 @@ const Container = styled.div`
 const Listen = () => {
   return (
     <Container>
-      <Player />
+      <Music />
     </Container>
   );
 };
