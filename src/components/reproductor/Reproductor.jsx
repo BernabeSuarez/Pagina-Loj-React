@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const tracks = [
   {
-    url: "music/la_Parecida.mp3",
+    url: "music/La_Parecida.mp3",
     title: "La Parecida",
     tags: ["Folklore"],
   },

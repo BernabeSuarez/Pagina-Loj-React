@@ -5,7 +5,7 @@ export const dataTour = [
         "time": "21:00 Hs.",
         "place": "Lincoln",
         "url": "https://goo.gl/maps/tTWAJ4wHgi9po6Kr8",
-        "src": "img/peña-lincoln.jpg"
+        "src": "img/lincoln.webp"
     }
 
 ]
