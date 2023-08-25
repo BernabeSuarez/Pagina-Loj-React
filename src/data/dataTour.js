@@ -1,14 +1,14 @@
-// export const dataTour = [
-//     {
-//         "date": "Viernes 7 de Julio",
-//         "name": "Club Rivadavia de Lincoln",
-//         "time": "21:00 Hs.",
-//         "place": "Lincoln",
-//         "url": "https://goo.gl/maps/tTWAJ4wHgi9po6Kr8",
-//         "src": "img/lincoln.webp"
-//     }
+export const dataTour = [
+    {
+        "date": "Viernes 7 de Julio",
+        "name": "Club Rivadavia de Lincoln",
+        "time": "21:00 Hs.",
+        "place": "Lincoln",
+        "url": "https://goo.gl/maps/tTWAJ4wHgi9po6Kr8",
+        "src": "img/10.jpg"
+    }
 
-// ]
+]
 
 //Plantilla datos 
 /*
