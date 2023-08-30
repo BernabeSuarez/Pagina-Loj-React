@@ -1,11 +1,11 @@
 export const dataTour = [
     {
-        "date": "Viernes 7 de Julio",
-        "name": "Club Rivadavia de Lincoln",
-        "time": "21:00 Hs.",
-        "place": "Lincoln",
-        "url": "https://goo.gl/maps/tTWAJ4wHgi9po6Kr8",
-        "src": "img/10.jpg"
+        "date": "sabado 9 de Septiembre",
+        "name": "Fiesta en Homenaje al Caballo",
+        "time": "17:00 Hs.",
+        "place": "Vedia",
+        "url": "https://goo.gl/maps/LL5FvUP8N1epN4VZ9",
+        "src": "img/loj-caballo.png"
     }
 
 ]
