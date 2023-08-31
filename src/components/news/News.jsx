@@ -17,10 +17,10 @@ const News = () => {
       <VideoContainer>
         <TitleTour>Novedades</TitleTour>
         <iframe
-          src="https://www.youtube.com/watch?v=M1lhkPnW_cs"
-          title="La Otra Junta!"
+          src="https://www.youtube.com/embed/M1lhkPnW_cs"
+          title="La Otra Junta - Fiesta en homenaje al Caballo - 2023"
           frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
       </VideoContainer>
