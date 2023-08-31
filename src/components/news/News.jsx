@@ -17,7 +17,7 @@ const News = () => {
       <VideoContainer>
         <TitleTour>Novedades</TitleTour>
         <iframe
-          src="https://youtu.be/M1lhkPnW_cs"
+          src="https://www.youtube.com/watch?v=M1lhkPnW_cs"
           title="La Otra Junta!"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
