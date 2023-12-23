@@ -1,11 +1,11 @@
 export const dataTour = [
     {
-        "date": "sabado 9 de Septiembre",
-        "name": "Fiesta en Homenaje al Caballo",
-        "time": "17:00 Hs.",
+        "date": "sabado 23 de diciembre",
+        "name": "Despedida de año",
+        "time": "21:00 Hs.",
         "place": "Vedia",
-        "url": "https://goo.gl/maps/LL5FvUP8N1epN4VZ9",
-        "src": "img/loj-caballo.png"
+        "url": "https://maps.app.goo.gl/urVyF2tmhw5bnEU88",
+        "src": "img/loj-flow.jpg"
     }
 
 ]
