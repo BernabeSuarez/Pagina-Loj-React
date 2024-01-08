@@ -114,7 +114,7 @@ const FooterInfo = styled.div`
   }
 `;
 
-const year = new Date().getFullYear;
+const year = new Date().getFullYear();
 
 const Footer = () => {
   return (
