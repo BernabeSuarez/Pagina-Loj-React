@@ -113,6 +113,9 @@ const FooterInfo = styled.div`
     margin-bottom: 0.8rem;
   }
 `;
+
+const year = new Date().getFullYear;
+
 const Footer = () => {
   return (
     <FooterContainer>
@@ -143,7 +146,7 @@ const Footer = () => {
         </SocialLinksFooter>
       </FooterSocial>
       <FooterInfo>
-        <h4>© Copyright La Otra Junta 2022</h4>
+        <h4>© Copyright La Otra Junta {year} </h4>
       </FooterInfo>
     </FooterContainer>
   );
