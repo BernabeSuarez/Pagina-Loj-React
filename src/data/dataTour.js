@@ -1,4 +1,5 @@
 export const dataTour = [
+    /*
     {
         "date": "sabado 23 de diciembre",
         "name": "Despedida de año",
@@ -7,7 +8,7 @@ export const dataTour = [
         "url": "https://maps.app.goo.gl/urVyF2tmhw5bnEU88",
         "src": "img/loj-flow.jpg"
     }
-
+    */
 ]
 
 //Plantilla datos 
