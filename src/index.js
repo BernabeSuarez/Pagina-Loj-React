@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import './assets/fonts/Tweaky.ttf';
+import { Analytics } from '@vercel/analytics/react';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,5 +13,6 @@ root.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    <Analytics />
   </React.StrictMode>
 );
