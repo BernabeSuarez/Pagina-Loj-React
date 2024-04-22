@@ -1,14 +1,14 @@
 export const dataTour = [
-    /*
+
     {
-        "date": "sabado 23 de diciembre",
-        "name": "Despedida de año",
-        "time": "21:00 Hs.",
-        "place": "Vedia",
-        "url": "https://maps.app.goo.gl/urVyF2tmhw5bnEU88",
-        "src": "img/loj-flow.jpg"
+        "date": "sabado 25 de mayo",
+        "name": "Comedor La Gringa",
+        "time": "Horario a confirmar",
+        "place": "Juan Bautista Alberdi",
+        "url": "https://maps.app.goo.gl/LhVMGwgV7dQCdctj8",
+        "src": "img/loj-alberdi.png"
     }
-    */
+
 ]
 
 //Plantilla datos 
