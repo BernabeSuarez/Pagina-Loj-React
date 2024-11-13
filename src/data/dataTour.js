@@ -1,12 +1,12 @@
 export const dataTour = [
 
     {
-        "date": "sabado 25 de mayo",
-        "name": "Comedor La Gringa",
+        "date": "Domingo 17 de Noviembre",
+        "name": "Lincoln Expo Music Festival",
         "time": "Horario a confirmar",
-        "place": "Juan Bautista Alberdi",
-        "url": "https://maps.app.goo.gl/LhVMGwgV7dQCdctj8",
-        "src": "img/loj-alberdi.png"
+        "place": "Lincoln, Buenos Aires",
+        "url": "https://maps.app.goo.gl/DXCs4fLtswNy2YoC7",
+        "src": "img/loj-lincoln.jpeg"
     }
 
 ]
